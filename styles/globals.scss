@@ -1,0 +1,141 @@
+$white: #ffffff;
+$gray: hsl(0, 0%, 59%);
+$dark-gray: hsl(0, 0%, 17%);
+
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  // overflow: hidden;
+  position: relative;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.top-section {
+  background: url('../public/pattern-bg-desktop.png') no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100%;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: $white;
+  }
+
+  .form {
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
+
+    input {
+      padding: 18px 22px;
+      color: $dark-gray;
+      font-size: 1rem;
+      font-weight: 500;
+      width: 30%;
+      border: none;
+      border-radius: 16px 0 0 16px;
+
+      &:focus-visible {
+        outline: none;
+      }
+    }
+
+    button {
+      all: unset;
+      display: flex;
+      align-items: center;
+      background-color: $dark-gray;
+      padding: 18px 22px;
+      border-radius: 0 16px 16px 0;
+      cursor: pointer;
+    }
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    background-color: $white;
+    margin-top: 40px;
+    padding: 32px;
+    border-radius: 16px;
+    z-index: 1;
+    margin-bottom: -45px;
+    box-shadow: rgba(149, 157, 165, 0.5) 0px 16px 24px;
+
+    .information {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      align-items: flex-start;
+      max-width: 25%;
+      text-align: left;
+
+      &:not(:first-child) {
+        border-left: 0.5px solid $gray;
+        padding-left: 32px;
+      }
+
+      h2 {
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+        color: $gray;
+        margin: 0;
+      }
+
+      .big-text {
+        font-size: 1.5rem;
+        color: $dark-gray;
+        font-weight: 500;
+        margin-top: 12px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.bottom-section {
+  z-index: 0;
+  flex: 1;
+  min-height: 100%;
+  position: relative;
+
+  #map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+footer {
+  text-align: center;
+  color: $dark-gray;
+  font-size: 0.6rem;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  background-color: $white;
+  padding: 6px;
+
+  a {
+    color: $dark-gray;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+      color: $gray;
+    }
+  }
+}
