@@ -1,6 +1,8 @@
 $white: #ffffff;
 $gray: hsl(0, 0%, 59%);
 $dark-gray: hsl(0, 0%, 17%);
+$black: #000000;
+$error-red: #e7737f;
 
 body {
   margin: 0;
@@ -61,10 +63,23 @@ main {
       all: unset;
       display: flex;
       align-items: center;
-      background-color: $dark-gray;
+      background-color: $black;
       padding: 18px 22px;
       border-radius: 0 16px 16px 0;
       cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      img {
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $dark-gray;
+        img {
+          transform: translateX(4px);
+        }
+      }
     }
   }
 
@@ -107,6 +122,16 @@ main {
         margin-bottom: 0;
       }
     }
+  }
+
+  .error-card {
+    margin-bottom: 0;
+    padding: 18px 22px;
+    border-radius: 16px;
+    font-size: 1rem;
+    background-color: $error-red;
+    font-weight: 500;
+    color: $dark-gray;
   }
 }
 
