@@ -2,6 +2,7 @@ import Input from '@/Components/Input';
 import Info from '@/Components/Info';
 import dynamic from 'next/dynamic';
 import Footer from '@/Components/Footer';
+import LinkPreview from '@/Components/LinkPreview';
 
 const Map = dynamic(() => import('../Components/Map'), { ssr: false });
 
@@ -89,6 +90,7 @@ export async function getServerSideProps(context) {
 export default function Home({ info }) {
   return (
     <>
+      <LinkPreview />
       <main>
         <section className="top-section">
           <h1>IP Address Tracker</h1>
