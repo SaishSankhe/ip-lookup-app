@@ -12,6 +12,7 @@ export default function LinkPreview() {
         property="og:description"
         content="Get information about any IP address, domain or email."
       />
+      <meta property="og:image" content={'preview.png'} />
       <meta property="og:image:alt" content="IP lookup app" />
     </Head>
   );
