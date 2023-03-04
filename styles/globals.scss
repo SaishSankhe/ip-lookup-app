@@ -6,7 +6,6 @@ body {
   margin: 0;
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
-  // overflow: hidden;
   position: relative;
 }
 
@@ -25,10 +24,18 @@ main {
   align-items: center;
   min-width: 100%;
 
+  .content-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   h1 {
     font-size: 2rem;
     font-weight: 500;
     color: $white;
+    margin: 32px;
   }
 
   .form {
@@ -67,18 +74,16 @@ main {
     width: 80%;
     background-color: $white;
     margin-top: 40px;
+    margin-bottom: -72px;
     padding: 32px;
     border-radius: 16px;
     z-index: 1;
-    margin-bottom: -45px;
     box-shadow: rgba(149, 157, 165, 0.5) 0px 16px 24px;
 
     .information {
       display: flex;
       flex-direction: column;
       flex: 1;
-      align-items: flex-start;
-      max-width: 25%;
       text-align: left;
 
       &:not(:first-child) {
@@ -136,6 +141,91 @@ footer {
 
     &:hover {
       color: $gray;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .top-section {
+    .content-wrapper {
+      margin: 0 24px;
+      width: auto;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .form {
+      input {
+        width: 100%;
+      }
+    }
+
+    .card {
+      width: auto;
+
+      .information {
+        .big-text {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 601px) {
+  .top-section {
+    .card {
+      .information {
+        &:not(:first-child) {
+          border-left: 0.5px solid $gray;
+          padding-left: 12px;
+        }
+
+        h2 {
+          font-size: 0.6rem;
+        }
+        .big-text {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 496px) {
+  .top-section {
+    width: 100%;
+    background: url('../public/pattern-bg-desktop.png') no-repeat;
+    background-size: cover;
+
+    .content-wrapper {
+      margin: 0 24px;
+      width: calc(100% - 48px);
+    }
+
+    .card {
+      flex-direction: column;
+      width: calc(100% - 48px);
+      margin-top: 24px;
+      margin-bottom: -180px;
+      gap: 24px;
+      padding: 24px;
+
+      .information {
+        text-align: center;
+
+        &:not(:first-child) {
+          border-left: none;
+          padding-left: 0;
+        }
+
+        .big-text {
+          font-size: 1.15rem;
+          margin-top: 8px;
+        }
+      }
     }
   }
 }

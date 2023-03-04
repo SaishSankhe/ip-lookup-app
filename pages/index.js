@@ -49,8 +49,10 @@ export default function Home({ info }) {
       <main>
         <section className="top-section">
           <h1>IP Address Tracker</h1>
-          <Input />
-          <Info info={info} />
+          <div className="content-wrapper">
+            <Input />
+            <Info info={info} />
+          </div>
         </section>
         <section className="bottom-section">
           <div id="map">
