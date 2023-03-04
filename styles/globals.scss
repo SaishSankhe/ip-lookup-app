@@ -199,27 +199,7 @@ footer {
   }
 }
 
-@media (max-width: 601px) {
-  .top-section {
-    .card {
-      .information {
-        &:not(:first-child) {
-          border-left: 0.5px solid $gray;
-          padding-left: 12px;
-        }
-
-        h2 {
-          font-size: 0.6rem;
-        }
-        .big-text {
-          font-size: 1rem;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 496px) {
+@media (max-width: 640px) {
   .top-section {
     width: 100%;
     background: url('../public/pattern-bg-desktop.png') no-repeat;
@@ -252,5 +232,12 @@ footer {
         }
       }
     }
+  }
+}
+
+@media (max-width: 375px) {
+  .top-section {
+    background: url('../public/pattern-bg-mobile.png') no-repeat;
+    background-size: cover;
   }
 }
