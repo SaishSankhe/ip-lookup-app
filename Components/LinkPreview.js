@@ -3,7 +3,7 @@ import Head from 'next/head';
 export default function LinkPreview() {
   return (
     <Head>
-      <title>Advice Generator</title>
+      <title>IP Lookup</title>
       <meta property="og:url" content="ip-lookup-saish.vercel.app/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="IP Lookup" />
